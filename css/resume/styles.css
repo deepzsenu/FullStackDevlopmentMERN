@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+}
+#body_header{
+    height: 65vh;
+    opacity: .8;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("https://wallpaperaccess.com/full/6051603.jpg");
+}
+
+/*Horizontal List*/
+.horizontal_list{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.horizontal_list li{
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+}
+.horizontal_list li  a{
+    color: white;
+    text-decoration: none;
+}
+.horizontal_list li  a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+    text-decoration: none;
+}
+.horizontal_list li  a img{
+    height: 25px;
+    width: 25px;
+}
+
+.text-center{
+    text-align: center;
+
+}
