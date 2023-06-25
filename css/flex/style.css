@@ -1,0 +1,29 @@
+#container{
+    height: 75vh;
+    width: 75vh;
+    background-color: cyan;
+    display: flex;
+    flex-direction: column;
+}
+
+#div1{
+    height: 30%;
+    width: 25%;
+    background-color: red;
+}
+#div2{
+    height: 30%;
+    width: 25%;
+    background-color: gray;
+}
+
+#div3{
+    height: 30%;
+    width: 25%;
+    background-color: green;
+}
+#div4{
+    height: 30%;
+    width: 25%;
+    background-color: black;
+}

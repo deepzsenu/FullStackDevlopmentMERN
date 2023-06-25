@@ -9,7 +9,8 @@ function requestHandler(req,res){
     res.writeHead(200, {"Content-Type": "text/html"});
 
     let filePath ;
-
+    
+    // using multiple file to render with different paths 
     switch(req.url){
         case '/':
             filePath = "./index.html";
@@ -31,14 +32,16 @@ function requestHandler(req,res){
         return res.end(data);
     })
 
-    // fs.readFile("./index.html", function(err,data){
-    //     if(err){
-    //         console.log("Error " , err);
-    //         return res.end("<h1>Error found<h1>");
-    //     }
+    /*
+    fs.readFile("./index.html", function(err,data){
+        if(err){
+            console.log("Error " , err);
+            return res.end("<h1>Error found<h1>");
+        }
 
-    //     return res.end(data);
-    // });
+        return res.end(data);
+    });
+    */
 
     // res.end("<h1> Server me!<h1>");
 }

@@ -102,6 +102,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 2px;
+    border: 3px solid white;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -111,8 +112,13 @@ body {
 }
 
 .about-me{
-    margin: 20px;
-}
-.about-me p{
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
     color: grey;
+    line-height: 28px;
+    font-size: 1.1rem;
+    margin: auto;
+    /* text-justify:distribute-all-lines; */
+    
 }
