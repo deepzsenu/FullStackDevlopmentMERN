@@ -50,6 +50,37 @@ body {
     text-align: center;
 }
 
+/* Section */
+section{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section :nth-child(2n){
+    background-color:grey;
+}
+
+section :nth-child(2n+1){
+    background-color: white;
+}
+
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    margin: 10px auto;
+    font-weight: 400;
+}
+
+.section-heading span{
+    font-size: 40px;
+    color: rgb(19, 19, 134);
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: .5rem;
+}
 /* Name and Social Icons*/
 
 #name-social-container {
@@ -111,6 +142,13 @@ body {
     box-shadow: 0px 0px 10px 10px rgba(112, 97, 97, 0.3);
 }
 
+.highlighted-text{
+    color: darkblue;
+    text-decoration: solid;
+    /* font-size: 10%; */
+    font-weight: 600;
+}
+
 .about-me{
     padding: 10px;
     width: 70%;
@@ -119,6 +157,8 @@ body {
     line-height: 28px;
     font-size: 1.1rem;
     margin: auto;
-    /* text-justify:distribute-all-lines; */
-    
 }
+
+/* =================================================
+                 SKILLS
+=====================================================*/
