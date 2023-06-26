@@ -1,0 +1,98 @@
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300); */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,900&display=swap");
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  box-shadow: 4px 8px 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #333;
+  font-family: "Courier Prime", "Courier", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(45deg, rgb(12, 12, 136), rgb(146, 159, 204));
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.css-challenge {
+  .text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 80%;
+  }
+
+  .text.text-bold {
+    font-size: 5rem;
+  }
+  .number {
+    display: flex;
+    .zero {
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      border: 25px solid white;
+      box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    .zero.zero-left {
+      margin-left: -15px;
+      z-index: 2;
+    }
+    .zero.zero-right {
+      margin-left: -15px;
+      z-index: 1;
+    }
+
+    .one {
+      width: 25px;
+      height: 100px;
+      background: white;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      z-index: 3;
+      box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .one.one-top {
+      width: 25px;
+      height: 40px;
+      position: absolute;
+      transform: rotate(55deg);
+      -webkit-transform: rotate(55deg);
+      -moz-transform: rotate(55deg);
+      -ms-transform: rotate(55deg);
+      -o-transform: rotate(55deg);
+      z-index: 1;
+      transform-origin: 0% 0%;
+    }
+  }
+}
