@@ -8,14 +8,23 @@
     </head>
     <body>
         <h1 id = "page-heading">
-            <i class="fa-solid fa-id-card-clip"></i> My Contacts List
+            <i class="fa-solid fa-address-book"></i></i> My Contacts List
         </h1>
-        <div id = "contacts_list" >
+        <div class = "contact_list_container" >
             <ul>
                 <% for (let i of contact_list) {%>
-                    <li class = "list">
-                        <span id  = "contact_name"><%= i.name %></span>
-                        <span id  = "contact_phone"><%= i.phone %></span>
+                    <li class = "contact">
+                        <div class="details">
+                            <span ><%= i.name %></span>
+                            <span ><%= i.phone %></span>
+                        </div>
+                        <div class = "delete_button">
+                            <!-- <a href="/delete_contact/<%= i.phone %>">    params get method -->
+                            <a href="/delete_contact/?phone=<%= i.phone%>">  <!--query method -->
+                                <i class=" fas fa-window-close"></i>
+                            </a>
+                        </div>
+
                     </li>
 
                 <%}%>

@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 
 const port = 8080;
+// const db = require("./config/mongoose.js");
+
 const app = express();
 
 app.set("view engine", "ejs");
@@ -31,10 +33,10 @@ app.use((req, res, next) => {
 
 // middlewar2 
 
-app.use((req,res, next) => {
-    console.log("My Name from MW1", req.myName);
-    next();
-})
+// app.use((req,res, next) => {
+//     console.log("My Name from MW1", req.myName);
+//     next();
+// })
 
 var contactList = [
     {
@@ -55,7 +57,7 @@ app.get("/", (req, res) => {
     // console.log(__dirname);
     // res.send("<h1>Cool it is running.<h1>");
     // console.log(req);
-    console.log("From the get route controller",req.myName);
+    // console.log("From the get route controller",req.myName);
 
     return res.render("home", {
         title: "contact list",
@@ -68,6 +70,8 @@ app.get("/contacts", (req, res) => {
     
 });
 
+//create contacts is a post request which is accepting the inputs from the form page.
+
 app.post("/create_contact", (req, res)=>{
     // return res.redirect("/contacts");
     // console.log(req)
@@ -79,9 +83,29 @@ app.post("/create_contact", (req, res)=>{
     //     name: req.body.name,
     //     phone: req.body.phone,
     // })
-    contactList.push(req.body)
-    return res.redirect("/");
+    contactList.push(req.body)//adding contact to the above array
+    return res.redirect("/"); // redirecting to our home page
 })
+
+// delete contact
+
+app.get("/delete_contact", (req, res)=>{
+
+    // console.log("Params are " , req.params);
+    // console.log(req.query);
+    let phone =  req.query.phone; 
+    // console.log(phone);
+    let contactIndex = contactList.findIndex(contact => contact.phone == phone);
+
+    if (contactIndex > -1) {
+        contactList.splice(contactIndex,1);
+    }
+
+    return res.redirect("/"); 
+
+})
+
+
 
 app.listen(port, function (err) {
     if (err) {
