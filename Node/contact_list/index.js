@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const port = 8080;
-// const db = require("./config/mongoose.js");
+const db = require("./config/mongoose.js");
 
 const app = express();
 
@@ -92,7 +92,7 @@ app.post("/create_contact", (req, res)=>{
 app.get("/delete_contact", (req, res)=>{
 
     // console.log("Params are " , req.params);
-    // console.log(req.query);
+    console.log(req.query);
     let phone =  req.query.phone; 
     // console.log(phone);
     let contactIndex = contactList.findIndex(contact => contact.phone == phone);
