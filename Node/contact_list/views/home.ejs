@@ -1,13 +1,34 @@
 <html>
     <head>
         <title>
-            <%= title %>
+            <%= locals.title %>
         </title>
-
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="styles.css"><script src="https://kit.fontawesome.com/2e2af52499.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>
-            Rendering form EJS view!
+        <h1 id = "page-heading">
+            <i class="fa-solid fa-id-card-clip"></i> My Contacts List
         </h1>
+        <div id = "contacts_list" >
+            <ul>
+                <% for (let i of contact_list) {%>
+                    <li class = "list">
+                        <span id  = "contact_name"><%= i.name %></span>
+                        <span id  = "contact_phone"><%= i.phone %></span>
+                    </li>
+
+                <%}%>
+            </ul>
+        </div>
+        <div class = "form">
+            <form action="/create_contact" method="post">
+                <input type="text" name ="name" placeholder=" Enter name" required>
+                <input type="text" name="phone" placeholder="Enter phone" required>
+                <button type="submit"> Add Contact</button>
+            </form>
+        </div>
+
+        <script src="js/home.js"></script>
     </body>
 </html>

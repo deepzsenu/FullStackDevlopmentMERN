@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.nav-bar{
+    display: flex;
+}
+.nav-list{
+    display: flex;
+    width: 50%;
+    background-color: yellow;
+}
+.nav-list li{
+    list-style: none;
+}
+.nav-list li a{
+    text-decoration: none;
+}
+.right-nav{
+    text-align: right;
+    background-color: blue;
+    width: 50%;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width:30px ;
+}

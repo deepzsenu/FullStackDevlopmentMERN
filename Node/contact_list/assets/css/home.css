@@ -1,0 +1,66 @@
+*{
+    /* align-items: center; */
+    background-color: rgba(23, 4, 58, 0.904);
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#page-heading{
+    color: rgb(207, 179, 179);
+    
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+#contacts_list{
+    color: antiquewhite;
+    
+}
+.list{
+    border: 1px solid white;
+    background-color: rgb(10, 10, 80);
+    /* text-align: center; */
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.list:hover{
+    color: aqua;
+}
+
+#contact_name{
+    /* order: 1px solid white; */
+    background-color: rgb(10, 10, 80);
+    text-align: left;
+    margin-right: 50%;
+}
+#contact_phone{
+    background-color: rgb(10, 10, 80);
+    text-align: right;
+    margin-left: 50%;
+}
+
+.form{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 8px;
+    text-align: center;
+}
+.form form input{
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: rgb(27, 27, 95);
+}
+button{
+    border: 2px solid white;
+    color: white;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+ul li{
+    list-style: none;
+}

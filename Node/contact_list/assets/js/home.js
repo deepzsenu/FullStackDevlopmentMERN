@@ -1,0 +1,1 @@
+console.log("My script is loaded now we can have fun!");
