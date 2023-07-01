@@ -4,6 +4,8 @@ function add(a,b){
     return a+b;
 }
 
+console.log("Hello js");
+
 console.log(add(2,10));
 
 console.log(process.argv);
