@@ -4,10 +4,13 @@ const path = require("path");
 const port = 8080;
 const db = require("./config/mongoose.js");
 
+const Contact = require("./models/contact.js");
+
 const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
 
 //app.use(express.urlencoded()) is a middle ware in this case
 /* A middleware is a function which has access to our request and response
@@ -17,6 +20,7 @@ app.set("views", path.join(__dirname, "views"));
     etc.
 
  */
+
 app.use(express.urlencoded())
 
 app.use(express.static('assets'));
@@ -59,10 +63,23 @@ app.get("/", (req, res) => {
     // console.log(req);
     // console.log("From the get route controller",req.myName);
 
-    return res.render("home", {
-        title: "contact list",
-        contact_list: contactList,
-    });
+    Contact.find({}).then( contact=> {
+
+        // console.log('Found contacts:', contact);
+        return res.render("home", {
+            title: "contact list",
+            contact_list: contact,
+        });
+      })
+      .catch(error => {
+        console.error('Error finding contacts:', error);
+        return;
+      });
+
+    // return res.render("home", {
+    //     title: "contact list",
+    //     contact_list: contactList,
+    // });
 });
 
 app.get("/contacts", (req, res) => {
@@ -83,25 +100,69 @@ app.post("/create_contact", (req, res)=>{
     //     name: req.body.name,
     //     phone: req.body.phone,
     // })
-    contactList.push(req.body)//adding contact to the above array
-    return res.redirect("/"); // redirecting to our home page
+    // contactList.push(req.body)//adding contact to the above array
+
+    // using database for creating contacts
+    // Contact.create({
+    //     name: req.body.name,
+    //     phone: req.body.phone,
+    // }, (err, newContact)=>{
+    //     if (err) {
+    //         console.log("Error in creating a contact",err);
+    //         return;
+    //     }
+    //     console.log("******",newContact);
+    //     return res.redirect("back");
+
+    // })
+    const newContactData = {
+        name: req.body.name,
+        phone: req.body.phone,
+    }
+
+    Contact.create(newContactData).then(createdContact => {
+        console.log('Contact created: Succesfully ');
+        return res.redirect("back");
+      })
+      .catch(error => {
+        console.error('Error creating contact:', error);
+        return;
+      });
+
+    // return res.redirect("/"); // redirecting to our home page
 })
 
 // delete contact
 
 app.get("/delete_contact", (req, res)=>{
 
+    // deleting using mongodb
+    // get the id from query parameters
+    let id = req.query.id;
+
+    // find the contact in the database using id and delete it.
+    Contact.findByIdAndDelete(id).then(contact=> {
+        console.log("Deleted Successfully");
+        return res.redirect("back");
+    }).catch(error=> {
+        console.error("Error in deleting the contact", error);
+        return;
+    })
+
+
+
+    // deleting using basic array 
     // console.log("Params are " , req.params);
-    console.log(req.query);
-    let phone =  req.query.phone; 
-    // console.log(phone);
-    let contactIndex = contactList.findIndex(contact => contact.phone == phone);
+    // console.log(req.query);
+    // let phone =  req.query.phone; 
+    // // console.log(phone);
+    // let contactIndex = contactList.findIndex(contact => contact.phone == phone);
 
-    if (contactIndex > -1) {
-        contactList.splice(contactIndex,1);
-    }
+    // if (contactIndex > -1) {
+    //     contactList.splice(contactIndex,1);
+    // }
 
-    return res.redirect("/"); 
+    // return res.redirect("/"); 
 
 })
 
