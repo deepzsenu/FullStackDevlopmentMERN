@@ -88,6 +88,7 @@ app.post("/create-task", (req, res) => {
     });
 });
 
+
 // Route to handle deleting tasks
 app.post('/delete-task', async function(req, res) {
     // Get the array of ids from the body of the request
