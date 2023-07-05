@@ -172,5 +172,5 @@ app.listen(port, function (err) {
     if (err) {
         console.log("you got an Error\n", err);
     }
-    console.log("Server ready at Port", port);
+    console.log("Server ready at Port:", port);
 });
