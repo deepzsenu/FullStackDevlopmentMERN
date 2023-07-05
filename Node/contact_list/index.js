@@ -7,7 +7,7 @@ const db = require("./config/mongoose.js");
 const Contact = require("./models/contact.js");
 
 const app = express();
-
+Contact
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
