@@ -4,7 +4,8 @@
             <%= locals.title %>
         </title>
         <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="styles.css"><script src="https://kit.fontawesome.com/2e2af52499.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/2e2af52499.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <h1 id = "page-heading">
@@ -20,13 +21,11 @@
                         </div>
                         <div class = "delete_button">
                             <!-- <a href="/delete_contact/<%= i.phone %>">    params get method -->
-                            <a href="/delete_contact/?phone=<%= i.phone%>">  <!--query method -->
+                            <a href="/delete_contact/?id=<%= i._id%>">  <!--query method -->
                                 <i class=" fas fa-window-close"></i>
                             </a>
                         </div>
-
                     </li>
-
                 <%}%>
             </ul>
         </div>
