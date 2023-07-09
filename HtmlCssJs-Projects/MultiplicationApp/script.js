@@ -13,10 +13,3 @@ const scoreElement = documet.getElementById("score");
 
 const inputElement = document.getElementById("input");
 
-if (inputElement.innerText == "5"){
-    scoreElement.innerHTML = `Score = ${5}`;
-}
-else{
-    scoreElement.innerHTML = "";
-    scoreElement.innerHTML = `Score = -1`;
-}
