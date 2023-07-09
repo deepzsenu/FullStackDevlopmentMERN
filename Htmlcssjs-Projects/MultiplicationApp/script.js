@@ -1,6 +1,6 @@
 const questionElement = document.getElementById("question");
 
-const num1 = Math.random()*10;
+const num1 = Math.random()*20;
 const num2 = Math.random()*10;
 
 function updateQuestion(){
@@ -13,3 +13,9 @@ const scoreElement = documet.getElementById("score");
 
 const inputElement = document.getElementById("input");
 
+if (inputElement.innerText == "5"){
+    scoreElement.innerHTML = `Score = ${5}`;
+}
+else{
+    scoreElement.innerHTML = `Score = -1`;
+}
