@@ -1,136 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>Anurag Pandey | Resume</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Kumar Saxena</title>
-    <link rel="stylesheet" href="styles.css"><script src="https://kit.fontawesome.com/2e2af52499.js" crossorigin="anonymous"></script>
-    
-</head>
-
-<body>
-
+  <body>
     <header id="body-header">
-        <nav>
-
-            <ul class="horizontal-list text-center nav-menu">
-                <li>
-                    <a href="#"> Home </a>
-                </li>
-                <li>
-                    <a href="#about"> About </a>
-                </li>
-                <li>
-                    <a href="#skills"> Skills </a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+      <nav>
+        <div class="dropdown-menu text-right">
+          <div class="bars">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="dropdown-list nav-menu">
+            <ul class="no-list-style">
+              <li>
+                <a href="#"> Home </a>
+              </li>
+              <li>
+                <a href="#about"> About </a>
+              </li>
+              <li>
+                <a href="#skills"> Skills </a>
+              </li>
+              >
+              <li>
+                <a href="#education">Education</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
-
-        </nav>
-
-        <div id="name-social-container">
-            <div class="text-center">
-                <h1 id="my-name">
-                    Deepak Kumar Saxena
-                </h1>
-            </div>
-            <div>
-                <ul class="horizontal-list text-center social-icons">
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-instagram"></i> </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-hackerrank"></i> </a>
-                    </li>
-                </ul>
-
-            </div>
-
+          </div>
         </div>
 
+        <ul class="no-list-style horizontal-list text-center nav-menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+
+          <li>
+            <a href="#education">Education</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="social-container">
+        <div class="text-center">
+          <h1 id="my-name">Deepak Kumar Saxena</h1>
+        </div>
+        <div>
+          <ul class="no-list-style horizontal-list text-center social-icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/deepzsenu/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/deepzsenu" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" target="_blank"
+                ><i class="fab fa-stack-overflow"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
+      <section id="about">
+        <div id="my-dp">
+          <img src="image/deepak.jfif" alt="My-image" />
+        </div>
+        <div id="about-para">
+          <p>
+            Hello my name is <span class="text-highlight">Anurag Pandey</span> I
+            am currently undergoing
+            <span class="text-highlight">career camp </span>program by coding
+            ninjas in which i have learned data structures and and fullstack
+            development which includes more than 250 data structure question an
+            several small and big projects .<br />
+            I have completed my MCA last year from
+            <span class="text-highlight">IGNOU</span>. Studying from an open
+            university has made me self disciplined and i have been accustomed
+            to self learning Thus, I have a steady source of motivation to learn
+            and grow . Moreover, I enjoy working as a team, and troubleshooting
+            issues. I am <span class="text-highlight">analytical </span>and love
+            brainstorming on good logical and design problems.
+          </p>
+        </div>
+      </section>
 
-        <section id="about">
-            <div id  = 'my-image'>
-                <img src="image/deepak.jfif" alt="">
+      <section id="skills">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-chalkboard-teacher"></i>
+          </span>
+          <span style="margin-top: 5vh"> Skills </span>
+        </h1>
 
+        <div class="skills-display" id="skills-container">
+          <div class="skill-progress">
+            <div class="eighty-one-percent mb-blue" data-bar-width="91">
+              <div class="skill-name">
+                <span>SQL </span>
+              </div>
             </div>
-            <div>
-                <p class = "about-me">Dynamic software engineer and experienced freelancer with expertise in <span class = "highlighted-text"> Python, coding experience, data analytics, data science, and machine learning.</span> Holds a Bachelor's degree in Computer Science from <span class = "highlighted-text"> Maharaja Ranjit Singh Punjab Technical University.</span> Demonstrates a strong track record of delivering high-quality solutions and possesses a deep understanding of <span class = "highlighted-text"> software development principles.</span> Adept at leveraging programming skills to drive innovation and solve complex problems. Proven ability to work independently and collaborate effectively in fast-paced environments.</p>
+          </div>
 
+          <div class="skill-progress">
+            <div class="sixty-two-percent mb-green" data-bar-width="62">
+              <div class="skill-name">
+                <span> Java </span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="skills">
-                <h1 class="section-heading">
-                    <span>
-                        <i class="fa-solid fa-chalkboard-user">
-
-                        </i>
-                    </span>
-                    <span>
-                        SKILL
-                    </span>
-                </h1>
-            <div id = "skill-display">
-
+          <div class="skill-progress">
+            <div class="eigthy-seven-percent mb-voil" data-bar-width="87">
+              <div class="skill-name">
+                <span> REACT </span>
+              </div>
             </div>
+          </div>
 
-        </section>
-
-        <section id="experience">
-            <div>
-
+          <div class="skill-progress">
+            <div class="fifty-five-percent mb-orange" data-bar-width="52">
+              <div class="skill-name">
+                <span> Data Structures and Algorithms </span>
+              </div>
             </div>
-
-        </section>
-
-        <section id="education">
-            <div>
-
+          </div>
+          <div class="skill-progress">
+            <div class="seventy-percent mb-orange" data-bar-width="72">
+              <div class="skill-name">
+                <span> HTML </span>
+              </div>
             </div>
+          </div>
 
-        </section>
-
-        <section id="portfolio">
-            <div>
-
+          <div class="skill-progress">
+            <div class="eighty-percent mb-blue" data-bar-width="80">
+              <div class="skill-name">
+                <span> CSS </span>
+              </div>
             </div>
+          </div>
 
-        </section>
-
-        <section id="contact">
-            <div>
-
+          <div class="skill-progress">
+            <div class="ninty-percent mb-green" data-bar-width="90">
+              <div class="skill-name">
+                <span> Javascript </span>
+              </div>
             </div>
+          </div>
 
-        </section>
+          <div class="skill-progress">
+            <div class="eigthy-two-percent mb-voil" data-bar-width="82">
+              <div class="skill-name">
+                <span> MERN Stack </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="education">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-graduation-cap"></i>
+          </span>
+          <span> Education </span>
+        </h1>
+
+        <div class="timeline">
+          <div class="timeline-box">
+            <div class="about-class">
+              <!-- <span><i class="fas fa-school school"></i></span> -->
+              <h3>Graduation</h3>
+              <p>
+                Uptec Computer Consultancy Ltd, Lucknow<br />
+                Indira Gandhi National Open University, Delhi<br />
+                (BCA-MCA)<br /><br />
+                June 2014 - August 2019
+              </p>
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="about-class">
+              <!-- <span><i class="fas fa-school school"></i></span> -->
+              <h3>
+                Higher <br />
+                Secondary
+              </h3>
+              <p>
+                Army Public School<br />
+                Lucknow,(UP)<br />
+                Percentage - 76.4%<br /><br />
+                Jun 2011
+              </p>
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="about-class">
+              <!-- <span><i class="fas fa-school school"></i></span> -->
+              <h3>Secondary</h3>
+              <p>
+                Army Public School<br />
+                Lucknow,(UP)<br />
+                percentage 86.8%<br /><br />
+                Jul 2009
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-divider">
+            <div class="timeline-traveller">
+              <i class="fas fa-car-side"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-th-list"></i>
+          </span>
+          <span> Portfolio </span>
+        </h1>
+
+        <div id="portfolio-container">
+          <div class="portfolio-image-container">
+            <img src="./image/todo.png" />
+            <div class="portfolio-details">
+              <p>
+                todo app
+                <a
+                  href="https://github.com/garunanurag/todolist"
+                  target="_blank"
+                  >project Link simple todo app to make todolist</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img src="image/ecom.png" />
+            <div class="portfolio-details">
+              <p>
+                <br /><br />Ecommerce_api
+                <!-- Write here basic details about the project. -->
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a
+                  href="https://github.com/garunanurag/ecommerce_api"
+                  target="_blank"
+                >
+                  a basic api with crud operations
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img src="image/ping.png" />
+            <div class="portfolio-details">
+              <p>
+                <br /><br />pingpong game
+                <!-- Write here basic details about the project. -->
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a
+                  href="https://github.com/garunanurag/pingpong-game"
+                  target="_blank"
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="portfolio-image-container">
+          <img src="image/tree.jpeg">
+          <div class="portfolio-details">
+            <p>
+              Write here basic details about the project.
+              Project coming soon.
+            </p>
+          </div>-->
+        </div> 
+        </div>
+      </section>
+
+      <section id="contact">
+        <h1 class="section-heading mb50px">
+          <span>
+            <i class="far fa-address-card"></i>
+          </span>
+          <span> Contact </span>
+        </h1>
+        <div id="contact-container">
+          <div id="contact-form-container">
+            <form id="contact-form">
+              <input
+                id="input-name"
+                name="name"
+                type="text"
+                placeholder="Your Name"
+              />
+              <input
+                id="input-email"
+                name="input-email"
+                type="text"
+                required
+                placeholder="Your Email"
+              />
+              <textarea
+                id="input-message"
+                name="input-message"
+                rows="2"
+                cols="40"
+                placeholder="Message"
+              ></textarea>
+              <button class="sub-btn" type="submit">SEND MESSAGE</button>
+            </form>
+          </div>
+          <div id="my-details-container">
+            <h3>Get In touch</h3>
+            <p>Village: Purabhoj, Post: Bibiyajalalpur <br />Kannauj 209729</p>
+
+            <h3>My Address</h3>
+            <div class="my-details-info-container">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kannauj(U.P), India</span>
+            </div>
+            <div class="my-details-info-container">
+              <i class="fas fa-mobile-alt"></i>
+              <span> +91 -6239380353</span>
+            </div>
+            <div class="my-details-info-container">
+              <i class="far fa-envelope"></i>
+              <span>deepzsenu@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center social-icons">
+          <ul class="no-list-style horizontal-list">
+            <li>
+              <a href="https://www.linkedin.com/in/deepzsenu/" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/deepzsenu" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-</body>
-
-</html>l
+    <script src="script.js"></script>
+  </body>
+</html>
