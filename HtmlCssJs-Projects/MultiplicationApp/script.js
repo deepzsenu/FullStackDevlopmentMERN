@@ -1,15 +1,41 @@
+
+const num1 = Math.ceil(Math.random()*10);
+const num2 = Math.ceil(Math.random()*10);
+
 const questionElement = document.getElementById("question");
+questionElement.innerHTML = `What is ${num1} multiply by ${num2}?`;
 
-const num1 = Math.random()*20;
-const num2 = Math.random()*10;
+const correctAns= num1*num2;
 
-function updateQuestion(){
-    questionElement.innerHTML = `What is ${num1.toFixed(0)} multiply by ${num2.toFixed(0)}?`;
+let score = JSON.parse(localStorage.getItem('score'));
+
+if(!score){
+    score = 0;
 }
-updateQuestion();
-
-
-const scoreElement = documet.getElementById("score");
 
 const inputElement = document.getElementById("input");
+// Add event listener to the form and get the data from the form
+const formElement = document.getElementById("form");
 
+formElement.addEventListener("submit", () => {
+    const userAnswer = +inputElement.value;
+    if (userAnswer == correctAns) {
+        score++;
+        console.log(score);
+        updateLocalStorage();
+    }
+    else{
+        score--;
+        console.log(score);
+        updateLocalStorage();
+    }
+})
+
+// saving  score to local storage.
+function updateLocalStorage(){
+    localStorage.setItem("score", JSON.stringify(score));
+}
+
+const scoreElement = document.getElementById("score");
+
+scoreElement.innerHTML = `Score = ${score}`;
