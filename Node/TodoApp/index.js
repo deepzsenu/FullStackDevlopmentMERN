@@ -11,9 +11,6 @@ const db = require("./config/mongoose.js");
 // Import the Task model
 const Task = require("./models/task.js");
 
-// Import the home function from the home_controller.js file (not shown here)
-const { home } = require("../codial/controllers/home_controller.js");
-
 // Create an Express application
 const app = express();
 
