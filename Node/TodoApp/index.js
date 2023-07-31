@@ -27,7 +27,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('assets'));
 
 // Route for the home page
-// Route for the home page
 app.get("/", (req, res) => {
     // Find all tasks in the database using the Task model
     Task.find({})
@@ -36,7 +35,7 @@ app.get("/", (req, res) => {
         const formattedTasks = tasks.map((task) => {
           // Convert the 'date' field from the task document to a Date object
           const taskDate = new Date(task.date);
-  
+          
           // Format the date using 'toLocaleDateString'
           const formattedDate = taskDate.toLocaleDateString("en-US", {
             year: "numeric",
