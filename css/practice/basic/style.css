@@ -1,0 +1,29 @@
+body{
+    height: 100vh;
+    background-color: rgb(70, 4, 61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-div{
+    background-color:antiquewhite;
+    padding: 20px;
+    border: .1px solid rgb(13, 13, 94);
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgb(216, 76, 193);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+p{
+    color:rgb(13, 13, 94);
+    font-size: large;
+    font-weight: 600;
+    text-decoration: double;
+    text-transform: capitalize;
+}
+
