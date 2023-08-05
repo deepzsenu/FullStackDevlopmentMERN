@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Meta tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Page title from a dynamic value "title" -->
-  <title><%=title%></title>
+  <title>
+    <%=title%>
+  </title>
   <!-- External CSS stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- Font Awesome icon kit -->
   <script src="https://kit.fontawesome.com/2e2af52499.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <!-- Main container for the entire page -->
   <div class="main-container">
@@ -25,11 +29,7 @@
           <div class="discription">
             <div>Description</div>
             <div>
-              <input
-                type="description"
-                name="description"
-                placeholder="Add the task Here"
-              />
+              <input type="description" name="description" placeholder="Add the task Here" />
             </div>
           </div>
         </div>
@@ -74,24 +74,31 @@
         <!-- Loop through the "task" array to display individual tasks -->
         <div>
           <% for( let i of task ){%>
-          <!-- Task item display -->
-          <div class="tasks-display">
-            <!-- Checkbox to mark task completion, name attribute uses the task ID for identification -->
-            <div class="check-box">
-              <input type="checkbox" name="<%= i._id %>" />
+            <!-- Task item display -->
+            <div class="tasks-display">
+              <!-- Checkbox to mark task completion, name attribute uses the task ID for identification -->
+              <div class="check-box">
+                <input type="checkbox" name="<%= i._id %>" />
+              </div>
+              <!-- Task description and due date -->
+              <div class="des-date">
+                <div class="desciption">
+                  <%=i.description%>
+                </div>
+                <div class="due-date"><i class="fa-solid fa-calendar-days"></i>
+                  <%= i.date%>
+                </div>
+              </div>
+              <!-- Task category -->
+              <div class="category">
+                <%=i.category%>
+              </div>
             </div>
-            <!-- Task description and due date -->
-            <div class="des-date">
-              <div class="desciption"><%=i.description%></div>
-              <div class="due-date"><i class="fa-solid fa-calendar-days"></i><%= i.date%></div>
-            </div>
-            <!-- Task category -->
-            <div class="category"><%=i.category%></div>
-          </div>
-          <%}%>
+            <%}%>
         </div>
       </form>
     </div>
   </div>
 </body>
+
 </html>
