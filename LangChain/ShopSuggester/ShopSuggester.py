@@ -37,6 +37,3 @@ def shop_suggestions(name):
     return text
 
 
-# text = shop_suggestions("Shoes")
-
-# print((text['products']))
