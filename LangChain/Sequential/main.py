@@ -58,7 +58,7 @@ if st.button("Tell me about it ", key="primary"):
     st.info(Assertion_chai_Seq.run(user_question))
 
     # Final chain
-    st.header("Final Chain")
+    st.subheader("Final Chain")
     template = """
         In light of the above facts how would you answer the question{}, user_questions
         """
