@@ -1,3 +1,7 @@
 Node/contact_list/node_modules
 Node/codial/node_modules
 Node/TodoApp/node_modules
+LangChain/CapitalFinder/secret.py
+LangChain/ShopSuggester/secret.py
+LangChain/secret.py
+LangChain/Sequential/secret.py
