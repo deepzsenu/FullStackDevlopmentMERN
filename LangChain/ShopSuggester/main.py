@@ -1,7 +1,7 @@
 import streamlit as st
 import ShopSuggester as ss
 
-st.header("A Simple Store suggester")
+st.header("A Simple Store Name suggester")
 
 name = st.text_input("Enter the types of products you Want in your STORE")
 

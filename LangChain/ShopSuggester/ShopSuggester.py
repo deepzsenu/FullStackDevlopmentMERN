@@ -3,6 +3,7 @@ import openai
 from langchain.llms import OpenAI
 from langchain.chains import SequentialChain, LLMChain
 from langchain.prompts import PromptTemplate
+from langchain.llms import HuggingFaceHub
 
 from secret import API_KEY
 
@@ -10,7 +11,7 @@ llm = OpenAI(openai_api_key=API_KEY, temperature=0.5)
 
 def shop_suggestions(name):
     template = """
-        Suggest me a Store name 
+        Suggest me a Store name
         {name}
         in one word
         """
