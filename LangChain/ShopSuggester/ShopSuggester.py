@@ -1,5 +1,4 @@
 import openai
-
 from langchain.llms import OpenAI
 from langchain.chains import SequentialChain, LLMChain
 from langchain.prompts import PromptTemplate
